@@ -1,59 +1,99 @@
 ---
 title: "Introduction to RMarkdown"
-author: 'Maëlle Salmon'
+author: 'M. Salmon'
 date: '`r Sys.Date()`'
 
 output: 
   revealjs::revealjs_presentation:
     css: rladies_revealjs.css
+    highlight: pygments
+    transition: slide
     
 ---
-```{r}
 
-r_ladies_theme <- function(){
-  theme_bw() %+replace% 
-    theme(text = element_text(family = "HelveticaNeue", face = "plain",
-                              colour = 'black', size = 10,
-                              hjust = .5, vjust = .5, angle = 0, 
-                              lineheight = 1.1, 
-                              margin = margin(t = 0, r = 0, b = 0, l = 0, 
-                                              unit = "pt"), 
-                              debug= FALSE), 
-          axis.text = element_text(colour = "#181818"), 
-          axis.title = element_text(face = "bold", colour = "#88398A", size = rel(1.1)), 
-          plot.title = element_text(face = "bold", size = rel(1.4), 
-                                    colour = "#88398A", 
-                                    margin = margin(t = 0, r = 0, b = 6.6,
-                                                    l = 0, unit = "pt")),
-          legend.title = element_text(face = "bold", colour = "#181818"),
-          panel.grid.major = element_line(color = "#D3D3D3"))
-}
-  
-```
-## R Markdown
 
-This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+# Why RMarkdown?
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+## Let's watch a small video
 
-## Slide with Bullets
+[here](https://www.youtube.com/watch?v=s3JldKoA0zw)
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
+## Any user here already?
 
-## Slide with R Code and Output
+If so, let's talk about your experience!
 
-```{r}
-summary(cars)
-```
+## Common workflow without RMarkdown
 
-## Slide with Plot
+* Script producing results and figures
 
-```{r, echo=FALSE, warning = FALSE, message = FALSE}
-library("ggplot2")
-ggplot(cars) +
-  geom_point(aes(speed, dist)) +
-  r_ladies_theme()
-```
+* Copy-paste into Word
 
+* Back and forth
+
+## RMarkdown
+
+* Code chunks and text in the same file.
+
+* Everything is then knitted into the final document!
+
+## One tool, many possible outputs {data-background-iframe="http://rmarkdown.rstudio.com/gallery.html"}
+
+# How?
+
+## Let's go!
+
+* Create a new Rmd from RStudio
+
+* Knit the template
+
+* echo
+
+## A bit of structure
+
+* Headers
+
+* Text style
+
+* Itemize
+
+## Pretty tables
+
+`knitr::kable`
+
+## Inline code
+
+Chunks vs. inline code.
+
+## Why it's better to name your chunks
+
+* navigation
+
+* de-bugging
+
+## Regression results
+
+* The power of `broom`
+
+## Figure options 
+
+Control the size
+
+## Caching
+
+When your calculations are quite slow.
+
+# If we've got time
+
+## reveal.js
+
+We could try creating slides like these ones!
+
+# And after this small tutorial
+
+## List of resources
+
+* RMarkdown RStudio website: http://rmarkdown.rstudio.com
+
+* RMarkdown Cheatsheet
+
+* Do you want a R-Ladies Barcelona Slack team to ask your questions?
