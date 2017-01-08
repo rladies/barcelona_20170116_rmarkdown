@@ -1,0 +1,59 @@
+---
+title: "Introduction to RMarkdown"
+author: 'Maëlle Salmon'
+date: '`r Sys.Date()`'
+
+output: 
+  revealjs::revealjs_presentation:
+    css: rladies_revealjs.css
+    
+---
+```{r}
+
+r_ladies_theme <- function(){
+  theme_bw() %+replace% 
+    theme(text = element_text(family = "HelveticaNeue", face = "plain",
+                              colour = 'black', size = 10,
+                              hjust = .5, vjust = .5, angle = 0, 
+                              lineheight = 1.1, 
+                              margin = margin(t = 0, r = 0, b = 0, l = 0, 
+                                              unit = "pt"), 
+                              debug= FALSE), 
+          axis.text = element_text(colour = "#181818"), 
+          axis.title = element_text(face = "bold", colour = "#88398A", size = rel(1.1)), 
+          plot.title = element_text(face = "bold", size = rel(1.4), 
+                                    colour = "#88398A", 
+                                    margin = margin(t = 0, r = 0, b = 6.6,
+                                                    l = 0, unit = "pt")),
+          legend.title = element_text(face = "bold", colour = "#181818"),
+          panel.grid.major = element_line(color = "#D3D3D3"))
+}
+  
+```
+## R Markdown
+
+This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+
+## Slide with Bullets
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+## Slide with R Code and Output
+
+```{r}
+summary(cars)
+```
+
+## Slide with Plot
+
+```{r, echo=FALSE, warning = FALSE, message = FALSE}
+library("ggplot2")
+ggplot(cars) +
+  geom_point(aes(speed, dist)) +
+  r_ladies_theme()
+```
+
