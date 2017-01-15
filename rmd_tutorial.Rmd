@@ -11,6 +11,18 @@ output:
     
 ---
 
+# Some announcements
+
+## {data-background="images/wwcodebcn.png"}
+
+## Asking for friends
+
+Interest in giving a talk/tutorial about data viz for PhD Students in February? Contact Carles Hernandez, carles.hernandez@isglobal.org
+
+
+## Asking for a friend...
+
+Still looking for R-Ladies speaker!
 
 # Why RMarkdown?
 
@@ -36,7 +48,7 @@ If so, let's talk about your experience!
 
 * Everything is then knitted into the final document!
 
-## One tool, many possible outputs {data-background-iframe="http://rmarkdown.rstudio.com/gallery.html"}
+## One tool, many possible outputs {data-background="images/rmd_formats.png"}
 
 # How?
 
@@ -48,7 +60,7 @@ If so, let's talk about your experience!
 
 * echo
 
-## A bit of structure
+## Text structure 
 
 * Headers
 
@@ -72,7 +84,7 @@ Chunks vs. inline code.
 
 ## Regression results
 
-* The power of `broom`
+The power of `broom`
 
 ## Figure options 
 
